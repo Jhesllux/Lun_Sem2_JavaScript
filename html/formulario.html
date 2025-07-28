@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function suma() {
+                let a,b;
+                a = parseFloat(document.getElementById("varA").value);
+                b = parseFloat(document.getElementById("varB").value);
+
+                let r = a + b;
+                document.getElementById("resultado").innerHTML = "El resultado de la suma es: " + r;
+            }
+            function resta() {
+                let a,b;
+                a = parseFloat(document.getElementById("varA").value);
+                b = parseFloat(document.getElementById("varB").value);
+
+                let r = a - b;
+                document.getElementById("resultado").innerHTML = "El resultado de la resta es: " + r;
+            }
+            function multiplicacion() {
+                let a,b;
+                a = parseFloat(document.getElementById("varA").value);
+                b = parseFloat(document.getElementById("varB").value);
+
+                let r = a * b;
+                document.getElementById("resultado").innerHTML = "El resultado de la multiplicación es: " + r;
+            }
+            function division() {
+                let a,b;
+                a = parseFloat(document.getElementById("varA").value);
+                b = parseFloat(document.getElementById("varB").value);
+
+                if (b === 0) {
+                    document.getElementById("resultado").innerHTML = "Error: División por cero no permitida.";
+                } else {
+                    let r = a / b;
+                    document.getElementById("resultado").innerHTML = "El resultado de la división es: " + r;
+                }
+            }
+            function borrar() {
+                document.getElementById("resultado").innerHTML = "";
+                document.getElementById("varA").value = "";
+                document.getElementById("varB").value = "";
+            }
+        </script>
+    </head>
+
+    <body style="text-align: center;">
+        <fieldset>
+            <legend>Operaciones en JavaScript</legend>
+            <p><label>A</label>
+                <input id="varA" type="number" name="varA" placeholder="Digite el Primer Valor" required>
+            </p>
+            <p><label>B</label>
+                <input id="varB" type="number" name="varB" placeholder="Digite el Segundo Valor" required>
+            </p>
+            <p id="resultado"></p>
+
+            <button type="button" onclick="suma()"> Suma</button>
+            <button type="button" onclick="resta()"> Resta</button>
+            <button type="button" onclick="multiplicacion()"> Multiplicación</button>
+            <button type="button" onclick="division()"> División</button>
+            <br><br>
+            <button type="button" onclick="borrar()">Borrar</button>
+        </fieldset>
+    </body>
+</html>

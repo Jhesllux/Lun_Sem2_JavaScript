@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>Usando Display con JavaScript</h2>
+        <p>JavaScript can show hidden HTML elements.</p>
+        <p id="demo" style="display:none">Un texto es una composición de signos codificados en un sistema de escritura que forma una unidad de sentido.</p>
+
+        <button id="btnOcultar" onclick="document.getElementById('demo').style.display='none'; this.style.display='none'; document.getElementById('btnMostrar').style.display='inline';">Ocultar</button>
+        
+        <button id="btnMostrar" style="display:none" onclick="document.getElementById('demo').style.display='block'; this.style.display='none'; document.getElementById('btnOcultar').style.display='inline';">Mostrar</button>
+
+    </body>
+</html> 
